@@ -1,0 +1,46 @@
+from django.urls import path
+from .views import (
+    TmMainListView, 
+    TmClaimListView, 
+    TmMarkDescriptionListView, 
+    TmCipoClassificationsListView, 
+    TmApplicantClassificationsListView, 
+    TmRepresentationListView,
+    TmInterestedPartyListView,
+    TmPriorityClaimListView,
+    TmEventListView,
+    TmApplicationDisclaimerListView,
+    TmApplicationTextListView,
+    TmTransliterationListView,
+    TmFootnoteListView,
+    TmFootnoteFormattedListView,
+    TmHeadingListView,
+    TmCancellationCaseListView,
+    TmCancellationCaseActionListView,
+    TmOppositionCaseListView,
+    TmOppositionCaseActionListView,
+)
+
+urlpatterns = [
+    # This maps the root URL of our app to the TmMainListView.
+    # When someone visits '/api/trademarks/', this view will be triggered.
+    path('', TmMainListView.as_view(), name='tm_main_list'),
+    path('claims/', TmClaimListView.as_view(), name='tm-claim-list'),
+    path('mark-descriptions/', TmMarkDescriptionListView.as_view(), name='tm-mark-description-list'),
+    path('cipo-classifications/', TmCipoClassificationsListView.as_view(), name='tm-cipo-classifications-list'),
+    path('applicant-classifications/', TmApplicantClassificationsListView.as_view(), name='tm-applicant-classifications-list'),
+    path('representations/', TmRepresentationListView.as_view(), name='tm-representation-list'),
+    path('interested-parties/', TmInterestedPartyListView.as_view(), name='tm-interested-party-list'),
+    path('priority-claims/', TmPriorityClaimListView.as_view(), name='tm-priority-claim-list'),
+    path('events/', TmEventListView.as_view(), name='tm-event-list'),
+    path('disclaimers/', TmApplicationDisclaimerListView.as_view(), name='tm-application-disclaimer-list'),
+    path('application-texts/', TmApplicationTextListView.as_view(), name='tm-application-text-list'),
+    path('transliterations/', TmTransliterationListView.as_view(), name='tm-transliteration-list'),
+    path('footnotes/', TmFootnoteListView.as_view(), name='tm-footnote-list'),
+    path('footnotes-formatted/', TmFootnoteFormattedListView.as_view(), name='tm-footnote-formatted-list'),
+    path('headings/', TmHeadingListView.as_view(), name='tm-heading-list'),
+    path('cancellation-cases/', TmCancellationCaseListView.as_view(), name='tm-cancellation-case-list'),
+    path('cancellation-cases/actions/', TmCancellationCaseActionListView.as_view(), name='tm-cancellation-case-action-list'),
+    path('opposition-cases/', TmOppositionCaseListView.as_view(), name='tm-opposition-case-list'),
+    path('opposition-cases/actions/', TmOppositionCaseActionListView.as_view(), name='tm-opposition-case-action-list'),
+]

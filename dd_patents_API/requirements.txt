@@ -1,0 +1,19 @@
+
+Django==5.1.1
+djangorestframework==3.14.0
+django-filter==23.1
+drf-dynamic-fields
+psycopg2-binary==2.9.10  # For PostgreSQL (can be replaced with mysqlclient for MySQL) - Changed version from 2.9.7
+Pillow==11.2.1 # For image processing in Django - Changed version from 9.4.0
+whitenoise==6.4.0 # For serving static files in production
+django-cors-headers==4.6.0 # For handling CORS in APIs - Changed version from 3.15.0
+drf-yasg==1.21.7 # added
+PyYAML>=6.0 # drf-yasg dependency
+setuptools>=70.0.0
+django-extensions==3.2.3
+python-dotenv
+waitress
+
+# Add later
+# mysqlclient==2.2.0  # For MySQL (comment this out if not using MySQL)
+# gunicorn==20.1.0  # For deploying Django applications

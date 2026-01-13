@@ -1,0 +1,20 @@
+# --- Python -------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg
+*.egg-info/
+dist/
+build/
+
+# --- Environment / tooling ---------------------------------
+env/
+venv/
+.venv/
+.idea/
+.vscode/
+*.sqlite3
+.DS_Store
+
+# --- OS / editor trash -------------------------------------
+Thumbs.db
